@@ -1,0 +1,20 @@
+<div fullscreen>
+    <h1>Add Booking</h1>
+    
+      <form [formGroup]="bookingForm" (ngSubmit)="addBooking()">
+        <mat-label>Start Date</mat-label>
+
+        <mat-form-field>
+          <br>
+          <input matInput formControlName="bookingStart" type="date" required/>
+        </mat-form-field>
+        <br>
+        <mat-label>End Date</mat-label>
+        <mat-form-field>
+          <br>
+          <input matInput formControlName="bookingEnd" type="date" required/>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" type="submit">Create Booking</button>
+      </form>
+    </div>

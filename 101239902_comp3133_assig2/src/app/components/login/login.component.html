@@ -1,0 +1,19 @@
+
+<div fullscreen>
+    <h1>Login</h1>
+    
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <mat-label>Username</mat-label>
+        <mat-form-field appearance="fill">
+          <input matInput formControlName="username" required placeholder="Enter Username">
+        </mat-form-field>
+        <br>
+        <mat-label>Password</mat-label>
+        <mat-form-field appearance="fill">
+          <input matInput type="password" formControlName="password" required placeholder="Enter Password"/>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      </form>
+    <p>Don't have an account yet? <a routerLink="/signup">Sign Up!</a></p>
+</div>

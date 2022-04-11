@@ -1,0 +1,41 @@
+
+<div fullscreen>
+    <h1>Sign Up</h1>
+  
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+      <mat-label>Username</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="username" required placeholder="Enter Username">
+      </mat-form-field>
+      <br>
+      <mat-label>First Name</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="firstname" required placeholder="Enter First Name">
+      </mat-form-field>
+      <br>
+      <mat-label>Last Name</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="lastname" required placeholder="Enter Last Name">
+      </mat-form-field>
+      <br>
+      <mat-label>Email</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="email" required placeholder="Enter Email ">
+      </mat-form-field>
+      <br>
+      <mat-label>Password</mat-label>
+      <mat-form-field appearance="fill">
+        <input matInput type="password" formControlName="password" required placeholder="Enter Password"/>
+      </mat-form-field>
+      <br>
+      <mat-label>Select</mat-label>
+      <mat-form-field appearance="fill">
+        <mat-select required formControlName="type">
+          <mat-option value="customer">Customer</mat-option>
+          <mat-option value="admin">Admin</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Sign Up</button>
+    </form>
+  
+  </div>

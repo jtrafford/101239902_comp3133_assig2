@@ -1,0 +1,13 @@
+<div class="navbar">
+    <nav>
+      <ul>
+        <li><a routerLink="/">Home Page</a></li>
+        <li><a routerLink="/list"> Available Listings</a></li>
+        <li *ngIf="!loggedIn"><a routerLink="/login">Login</a></li>
+        <li *ngIf="!loggedIn"><a routerLink="/signup">Sign Up</a></li>
+        <li *ngIf="loggedIn"><a routerLink="/history"> View Bookings</a></li>
+        <li *ngIf="loggedIn"><a (click)="logout()">Logout</a></li>
+        <li *ngIf="loggedIn"><a routerLink="/admin">My Listings</a></li>
+      </ul>
+    </nav>
+  </div>
